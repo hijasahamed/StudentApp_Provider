@@ -35,7 +35,7 @@ Future<void> addstudent(namecontroller, agecontroller, phonecontroller,formkey, 
     agecontroller.text = '';
     phonecontroller.text = '';
     Navigator.of(context).pop();
-    snackbar('Submitted', context);
+    snackbar('Details Submitted', context);
   } else {
     snackbar('Please Add Details', context);
   }
@@ -67,6 +67,6 @@ Future<void> update(
     editcontroller.agecontroller.text = '';
     editcontroller.phonecontroller.text = '';
 
-    snackbar('Updated', context);
+    snackbar('Details Updated', context);
   }
 }

@@ -5,6 +5,9 @@ import 'package:student_app_provider/screens/edit_student/edit_controller.dart';
 import 'package:student_app_provider/screens/home_screen/home_screen.dart';
 
 void main(){
+  WidgetsFlutterBinding.ensureInitialized();
+  var dataBase=Studentcontoller();
+  dataBase.initializingdatabase();
   runApp(const MyApp());
 }
 

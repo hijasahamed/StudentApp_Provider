@@ -4,6 +4,11 @@ import 'package:student_app_provider/screens/edit_student/edit_controller.dart';
 import 'package:student_app_provider/screens/snackbar_functions/snackbar_functions.dart';
 
 class TextFormFieldWidget extends StatelessWidget {
+
+  TextEditingController nameController;
+  TextEditingController ageController;
+  TextEditingController phoneController;
+
   TextFormFieldWidget({
     super.key,
     required this.formkey,
@@ -14,9 +19,6 @@ class TextFormFieldWidget extends StatelessWidget {
      this.editcontroller
   });
   GlobalKey formkey;
-  TextEditingController nameController;
-  TextEditingController ageController;
-  TextEditingController phoneController;
   bool isFromEdit;
   Editcontroll? editcontroller;
 

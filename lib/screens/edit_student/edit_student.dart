@@ -5,9 +5,9 @@ import 'package:student_app_provider/screens/edit_student/edit_controller.dart';
 import 'package:student_app_provider/screens/text_form_field/text_form_field.dart';
 
 class EditScreen extends StatelessWidget {
-  EditScreen({super.key,this.studentdetails});
+  EditScreen({super.key,this.stdDetails});
 
-  Studentmodel? studentdetails;
+  Studentmodel? stdDetails;
 
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
@@ -23,7 +23,7 @@ class EditScreen extends StatelessWidget {
             formkey: formKey, 
             nameController: value.namecontroller, 
             ageController: value.agecontroller, 
-            phoneController: value.namecontroller, 
+            phoneController: value.phonecontroller, 
             isFromEdit: true,
             editcontroller: value,
           );

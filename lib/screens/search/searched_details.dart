@@ -20,13 +20,16 @@ class SearchedDetails extends StatelessWidget {
               color: const Color.fromARGB(255, 43, 48, 46),
               height: 70,
               width: double.maxFinite,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text('NAME :',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 14),),
-                  Text(student.name,style: const TextStyle(fontWeight: FontWeight.bold,fontSize: 20),)
-                ],
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text('Name :',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 12),),
+                    Text(student.name,style: const TextStyle(fontWeight: FontWeight.bold,fontSize: 20),)
+                  ],
+                ),
               ),
             ),
           ),
@@ -36,13 +39,16 @@ class SearchedDetails extends StatelessWidget {
               color: const Color.fromARGB(255, 43, 48, 46),
               height: 70,
               width: double.maxFinite,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text('AGE :',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 14),),
-                  Text(student.age,style: const TextStyle(fontWeight: FontWeight.bold,fontSize: 20),)
-                ],
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text('Age :',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 12),),
+                    Text(student.age,style: const TextStyle(fontWeight: FontWeight.bold,fontSize: 20),)
+                  ],
+                ),
               ),
             ),
           ),
@@ -52,13 +58,16 @@ class SearchedDetails extends StatelessWidget {
               color: const Color.fromARGB(255, 43, 48, 46),
               height: 70,
               width: double.maxFinite,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text('PHONE :',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 14),),
-                  Text(student.phone,style: const TextStyle(fontWeight: FontWeight.bold,fontSize: 20),)
-                ],
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text('Phone :',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 12),),
+                    Text(student.phone,style: const TextStyle(fontWeight: FontWeight.bold,fontSize: 20),)
+                  ],
+                ),
               ),
             ),
           ),

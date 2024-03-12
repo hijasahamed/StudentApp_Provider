@@ -29,30 +29,35 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-              Flexible(
-              flex: 8,
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  color: const Color.fromARGB(255, 32, 33, 33),
-                  child: const StudentLisScreen(),
-                ),
-              )
-            ),
             Flexible(
-              flex: 1,
+                flex: 8,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    color: const Color.fromARGB(255, 32, 33, 33),
+                    child: const StudentLisScreen(),
+                  ),
+                )),
+            Flexible(
+                flex: 1,
                 child: Center(
                   child: ElevatedButton(
+                      style: const ButtonStyle(
+                          backgroundColor: MaterialStatePropertyAll(
+                        Colors.yellow,
+                      )),
                       onPressed: () {
                         Navigator.of(context)
                             .push(MaterialPageRoute(builder: (ctx) {
                           return AddStudent();
                         }));
                       },
-                      child: const Text('Add Student',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),)
-                  ),
-                )
-            ),
+                      child: const Text(
+                        'Add Student',
+                        style: TextStyle(
+                            color: Colors.black, fontWeight: FontWeight.bold),
+                      )),
+                )),
           ],
         ),
       )),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:student_app_provider/provider/student_controller.dart';
+import 'package:student_app_provider/screens/edit_student/edit_controller.dart';
 import 'package:student_app_provider/screens/edit_student/edit_student.dart';
 import 'package:student_app_provider/screens/search/searched_details.dart';
 import 'package:student_app_provider/screens/snackbar_functions/snackbar_functions.dart';
@@ -59,8 +60,16 @@ class StudentLisScreen extends StatelessWidget {
                             children: [
                               IconButton(
                                   onPressed: () {
-                                      Navigator.of(context).push(MaterialPageRoute(builder: (ctx) {
-                                      return EditScreen();
+                                    final control = Provider.of<Editcontroll>(
+                                      context,
+                                      listen: false
+                                    );
+                                    control.oninit(data);
+                                    Navigator.of(context)
+                                        .push(MaterialPageRoute(builder: (ctx) {
+                                      return EditScreen(
+                                        stdDetails: data,
+                                      );
                                     }));
                                   },
                                   icon: const Icon(

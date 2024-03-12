@@ -47,7 +47,7 @@ class Search extends SearchDelegate {
           );
         } else if (filtered.isEmpty) {
           return const Center(
-              child: Text('No Data',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),)
+              child: Text('No Searched Data',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),)
           );
         }
         if (controller.students.isNotEmpty) {
@@ -56,18 +56,23 @@ class Search extends SearchDelegate {
               final data = filtered[index];
               String nameval = data.name;
               if ((nameval).contains(query)) {
-                return Column(
-                  children: [
-                    ListTile(
-                      onTap: () {
-                        Navigator.of(context).push(MaterialPageRoute(builder: (ctx) {
-                    return SearchedDetails(student: data);
-                  }));
-                      },
-                      title: Text(data.name),                      
+                return Padding(
+                  padding: const EdgeInsets.only(top: 10,left: 5,right: 5),
+                  child: Card(
+                    elevation: 5,
+                    child: Column(
+                      children: [
+                        ListTile(
+                          onTap: () {
+                            Navigator.of(context).push(MaterialPageRoute(builder: (ctx) {
+                        return SearchedDetails(student: data);
+                      }));
+                          },
+                          title: Text(data.name),                      
+                        ),
+                      ],
                     ),
-                    const Divider(),
-                  ],
+                  ),
                 );
               } else {
                 return Container();
@@ -78,7 +83,7 @@ class Search extends SearchDelegate {
         } else {
           return const Center(
             child: Text(
-              'No data',
+              'No Data Available',
               style: TextStyle(color: Colors.white),
             ),
           );
@@ -102,7 +107,7 @@ class Search extends SearchDelegate {
           );
         } else if (filtered.isEmpty) {
           return const Center(
-              child: Text('No Data',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),)
+              child: Text('No Searched Data',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),)
           );
         }
         if (controller.students.isNotEmpty) {
@@ -111,18 +116,23 @@ class Search extends SearchDelegate {
               final data = filtered[index];
               String nameval = data.name;
               if ((nameval).contains((query.trim()))) {
-                return Column(
-                  children: [
-                    ListTile(
-                      onTap: () {
-                        Navigator.of(context).push(MaterialPageRoute(builder: (ctx) {
-                    return SearchedDetails(student: data);
-                  }));
-                      },
-                      title: Text(data.name),                     
+                return Padding(
+                  padding: const EdgeInsets.only(top: 10,left: 5,right: 5),
+                  child: Card(
+                    elevation: 5,
+                    child: Column(
+                      children: [
+                        ListTile(
+                          onTap: () {
+                            Navigator.of(context).push(MaterialPageRoute(builder: (ctx) {
+                        return SearchedDetails(student: data);
+                      }));
+                          },
+                          title: Text(data.name),                     
+                        ),
+                      ],
                     ),
-                    const Divider(),
-                  ],
+                  ),
                 );
               } else {}
               return null;
@@ -132,7 +142,7 @@ class Search extends SearchDelegate {
         } else {
           return const Center(
             child: Text(
-              'No data',
+              'No Data Available',
               style: TextStyle(color: Colors.white),
             ),
           );
